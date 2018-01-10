@@ -1,0 +1,11 @@
+en:
+  js:
+    topics:
+      bottom:
+        unsolved: "There are no more unsolved topics."
+      none:
+        unsolved: "There are no unsolved topics."
+    filters:
+      unsolved:
+        title: "Unsolved"
+        help: "Unsolved topics"
