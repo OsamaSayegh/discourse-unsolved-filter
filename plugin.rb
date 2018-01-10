@@ -14,7 +14,7 @@ after_initialize do
         topics = topics.where("topics.id NOT IN (
           SELECT tc.topic_id
           FROM topic_custom_fields tc
-          WHERE tc.name = 'accepted_answer_post_id' AND tc.value IS NOT NULL
+          WHERE tc.name = 'accepted_answer_post_id' OR tc.name = 'accepted_answer_post_ids' AND tc.value IS NOT NULL
         )").where("topics.id NOT IN (
           SELECT cats.topic_id
           FROM categories cats WHERE cats.topic_id IS NOT NULL
